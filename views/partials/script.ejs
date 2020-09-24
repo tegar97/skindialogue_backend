@@ -1,0 +1,35 @@
+ <!-- Bootstrap core JavaScript-->
+ <script src="/sb-admin/vendor/jquery/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script>
+
+ <script src="/sb-admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+ <!-- Core plugin JavaScript-->
+ <script src="/sb-admin/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+ <!-- Custom scripts for all pages-->
+ <script src="/sb-admin/js/sb-admin-2.min.js"></script>
+  <!-- Page level plugins -->
+  <script src="/sb-admin/vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="/sb-admin/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+  <script src="/sb-admin/js/demo/datatables-demo.js"></script>
+  <script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+
+  <script>
+  $(function($) {
+    let url = window.location.href;
+      $('.nav-item a ').each(function() {
+        console.log()
+      if (this.href === url) {
+      $(this.closest('.nav-item')).addClass('active');
+   }
+  });
+  });
+  </script>
+</body>
+
+</html>

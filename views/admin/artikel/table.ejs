@@ -1,0 +1,55 @@
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <a type="button" class="btn btn-primary" href="/artikel/create">
+           <i class="fas fa-plus"></i>
+          </a>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>images</th>
+              <th>title</th>
+              <th>Date</th>
+              <th>Action</th>
+             
+            </tr>
+          </thead>
+          <tbody>
+            <% for(let i = 0; i < artikel.length; i++) {  %> 
+              <tr>
+                  <td><%= i + 1%></td>
+                  <td><img src="/img/thumbnail/<%= artikel[i].thumbnail %> " width="150" height="130"></td>
+                  <td><%= artikel[i].title %></td>
+                  <td><%= artikel[i].date.toLocaleString('en-us',{day : '2-digit',month: 'long',year: 'numeric'}) %></td>
+                  <td>
+                    <a href="/artikel/edit/<%= artikel[i].id %>" type="button" class="btn btn-warning btn-circle btn-sm btn-update"  ><i class="fas fa-edit"></i></a>
+                    <form class="d-inline" action="/artikel/<%= artikel[i].id %>?_method=DELETE" method="POST">
+                      <button type="submit" class="btn btn-danger btn-circle btn-sm"><i class="fas fa-trash"></i></button>
+
+                    </form>
+                   
+                     
+                   
+                  </td>
+              </tr>
+            <% } %>
+     
+          
+          </tbody>
+    
+          <!-- <tbody>
+              <tr>
+                  <td></td>
+              </tr>
+          </tbody> -->
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+  
+   
